@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-sketch</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+      integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <link rel="stylesheet" href="./Skeleton/css/skeleton.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title">Etch-a-sketch</h1>
+      <h4 class="mode">Mode: Coloring</h4>
+    </header>
+    <main class="main">
+      <div class="settings">
+        <button onclick="changeColor('black')">Black</button>
+        <button onclick="changeColor('random')">Rainbow mode</button>
+        <button onclick="changeColor('white')">Eraser</button>
+        <button onclick="clearBoard()">clear</button>
+        <input
+          class="size-bar"
+          type="text"
+          placeholder="Size of Board"
+          value="16"
+          onchange="changeSize(this.value)"
+        />
+        <button>Set Size</button>
+      </div>
+      <div class="grid" id="grid"></div>
+    </main>
+    <footer class="footer">
+      <p>
+        Copyright ©
+        <script>
+          document.write(new Date().getFullYear());
+        </script>
+        Marlon Montenegro
+      </p>
+      <a href="https://github.com/MarlonMontenegro" target="blank">
+        <i class="fa-brands fa-github"></i>
+      </a>
+    </footer>
+    <script src="./main.js"></script>
+  </body>
+</html>
